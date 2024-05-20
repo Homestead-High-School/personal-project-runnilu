@@ -23,6 +23,23 @@ public class Pokemon {
             if (pokemonList.contains(starter)) {
                 pokemonTeam.add(starter);
                 System.out.println("Successfully added " + starter + " to your team");
+                System.out.println("Now that you have your starter Pokemon, it is time to catch your remaining team!")
+                while (pokemonTeam.length > 6){
+                    getEncounter();
+                    system.out.println("A Wild " + + " Appears!");
+                    system.out.println("Would you like to catch it? (y/n)");
+                    String catch = input.next();
+                    if(catch.equals("y")){
+
+                    }
+                    else if(catch.equals("n")){
+                        System.out.println("You got away safely");
+                    }
+                    else{
+                        System.out.println("Error")
+                    }
+                }
+                System.out.print("Now that your team is full, 
             else{ 
                 System.out.print("Invalid Reponse!");
             }
