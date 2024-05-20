@@ -20,15 +20,9 @@ public class Pokemon {
             System.out.print("You may choose any starter from the Kanto region(Gen 1)!");
             System.out.print("Remember to capitalize all of your Pokemon's names!");
             String starter = input.next();
-            if (starter.equals("Bulbasaur")){
-                pokemonTeam.add(pokemonList[0]);
-            }
-            else if (starter.equals("Charmander")){
-                pokemonTeam.add(pokemonList[3]);
-            }
-            else if (starter.equals("Squirtle")){
-                pokemonTeam.add(pokemonList[6]);
-            }
+            if (pokemonList.contains(starter)) {
+                pokemonTeam.add(starter);
+                System.out.println("Successfully added " + starter + " to your team");
             else{ 
                 System.out.print("Invalid Reponse!");
             }
