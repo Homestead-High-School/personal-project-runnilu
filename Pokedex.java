@@ -5,6 +5,8 @@ public class Pokedex {
     public static void main(String[] args) {
 
     ArrayList<String> pokemonList = new ArrayList<>();
+    ArrayList<String> pokemonTypes = new ArrayList<>();
+    ArrayList<String> pokemonBaseStat = new ArrayList<>();
 
         pokemonList.add("Bulbasaur"); 
         pokemonList.add("Ivysaur");
@@ -157,5 +159,24 @@ public class Pokedex {
         pokemonList.add("Dragonite");
         pokemonList.add("Mewtwo");
         pokemonList.add("Mew");
+
+        pokemonTypes.add("Normal");
+        pokemonTypes.add("Fighting");
+        pokemonTypes.add("Flying");
+        pokemonTypes.add("Poison");
+        pokemonTypes.add("Ground");
+        pokemonTypes.add("Rock");
+        pokemonTypes.add("Bug");
+        pokemonTypes.add("Ghost");
+        pokemonTypes.add("Steel");
+        pokemonTypes.add("Fire");
+        pokemonTypes.add("Water");
+        pokemonTypes.add("Grass");
+        pokemonTypes.add("Electric");
+        pokemonTypes.add("Psychic");
+        pokemonTypes.add("Ice");
+        pokemonTypes.add("Dragon");
+        pokemonTypes.add("Dark");
+        pokemonTypes.add("Fairy");
     }
 }
