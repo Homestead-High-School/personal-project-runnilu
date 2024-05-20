@@ -12,6 +12,7 @@ public class PokemonEncounter {
         int catch = Math.random(2);
         if(catch.equals(1)){
             System.out.println("Congrats, you captured the pokemon!");
+            pokemonTeam.add(
         }
         else if(catch.equals(2)){
             System.out.println("The pokemon fled!");
