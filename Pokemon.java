@@ -19,7 +19,7 @@ public class Pokemon {
         String startGame = input.next(); 
 
 
-        if (startGame.equals("y")){
+        if (startGame.equalsIgnoreCase("y")){
             System.out.print("Lets begin with your starter.");
             System.out.print("You may choose any starter from the Kanto region(Gen 1)!");
             System.out.print("Remember to capitalize all of your Pokemon's names!");
@@ -28,21 +28,25 @@ public class Pokemon {
                 pokemonTeam.add(starter);
                 System.out.println("Successfully added " + starter + " to your team");
                 System.out.println("Now that you have your starter Pokemon, it is time to catch your remaining team!");
-                while (pokemonTeam.size() > 6){
+                
+                while (pokemonTeam.size() < 6){
                     int current = getEncounter();
                     System.out.println("A Wild " + pokemonList.get(current) + " Appears!");
                     System.out.println("Would you like to catch it? (y/n)");
                     String catched = input.next();
-                    if(catched.equals("y")){
+                    if(catched.equalsIgnoreCase("y")){
                         pokemonCatcher(pokemonTeam, current);
-                    } else if(catched.equals("n")){
+                    }
+                    else if(catched.equalsIgnoreCase("n")){
                         System.out.println("You got away safely");
                     } else {
                         System.out.print("Invalid Reponse!"); 
                     }
                     
                 } 
-                
+                System.out.println("Your final team is:");
+                System.out.println(pokemonTeam);
+
                 } else { 
                 System.out.print("Invalid Reponse!");
             }
