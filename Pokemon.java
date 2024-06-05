@@ -8,7 +8,7 @@ public class Pokemon {
     private static ArrayList<String> pokemonTypes = new ArrayList<>();
     
     public static void main(String[] args) {
-
+        addPokedex();
         ArrayList<String> pokemonTeam = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Luke's version of a java Pokemon game");
@@ -27,7 +27,7 @@ public class Pokemon {
             if (pokemonList.contains(starter)) {
                 pokemonTeam.add(starter);
                 System.out.println("Successfully added " + starter + " to your team");
-                System.out.println("Now that you have your starter Pokemon, it is time to catch your remaining team!")
+                System.out.println("Now that you have your starter Pokemon, it is time to catch your remaining team!");
                 while (pokemonTeam.size() > 6){
                     int current = getEncounter();
                     System.out.println("A Wild " + pokemonList.get(current) + " Appears!");
@@ -35,32 +35,25 @@ public class Pokemon {
                     String catched = input.next();
                     if(catched.equals("y")){
                         pokemonCatcher(pokemonTeam, current);
-                    }
-                    else if(catched.equals("n")){
+                    } else if(catched.equals("n")){
                         System.out.println("You got away safely");
+                    } else {
+                        System.out.print("Invalid Reponse!"); 
                     }
-                    else {
-                        
-                    }
-                }
-
-            else{ 
+                    
+                } 
+                
+                } else { 
                 System.out.print("Invalid Reponse!");
             }
 
-            
-
-            }
-
-            else if (startGame.equals("n")){
+            } else if (startGame.equals("n")){
                 System.out.print("Game not Started");
-            }
-
-            else {
+            } else {
                 System.out.print("Invalid response");
             }
         }
-    }
+    
     public static int getEncounter(){
         Random rand = new Random();
         return rand.nextInt(151);
